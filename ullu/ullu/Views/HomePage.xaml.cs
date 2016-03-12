@@ -48,13 +48,15 @@ namespace ullu.Views
 
         private async void OnAddStoreBtnClicked(object sender, EventArgs e)
         {
+            ToolbarItem t = sender as ToolbarItem;
+            t.Clicked -= OnAddStoreBtnClicked;
             await Navigation.PushAsync(new AddStorePage());
-            
+            t.Clicked += OnAddStoreBtnClicked;
+
         }
         private async void OnFilterBtnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new FilterPage());
-          
         }
         public async void OpenStore(object sender, SelectedItemChangedEventArgs e)
         {
