@@ -1,5 +1,6 @@
 ﻿using DLToolkit.Forms.Controls;
 using System;
+using ullu.Constants;
 using ullu.Models;
 using ullu.ViewModels;
 using Xamarin.Forms;
@@ -14,6 +15,10 @@ namespace ullu.Views
             InitializeComponent();
             ViewModel = new AddStoreViewModel();
             BindingContext = ViewModel;
+            foreach(string category in AppConstants.CATEGORIES)
+            {
+                categoryPicker.Items.Add(category);
+            }
             var tagEntryView = new TagEntryView()
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -21,9 +26,7 @@ namespace ullu.Views
                 TagValidatorFactory = new Func<string, object>((arg) => ViewModel.ValidateAndReturn(arg)),
                 TagViewFactory = new Func<View>(() => new TagItemView())
             };
-
             tagEntryView.SetBinding<AddStoreViewModel>(TagEntryView.TagItemsProperty, v => v.Items);
-
             tagEntryView.TagTapped += (sender, e) => {
                 if (e.Item != null)
                     ViewModel.RemoveTag((TagItem)e.Item);

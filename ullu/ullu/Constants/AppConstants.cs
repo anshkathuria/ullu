@@ -18,6 +18,7 @@ namespace ullu.Constants
                                                                    "Veg",
                                                                    "Non-Veg",
                                                                    "Chinese",
-                                                                   "Juice Centre" };
+                                                                   "Juice Centre",
+                                                                   "Veg & Non-Veg" };
     }
 }

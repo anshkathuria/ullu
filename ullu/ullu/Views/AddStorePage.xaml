@@ -18,6 +18,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
           </Grid.RowDefinitions>
 
           <Grid.ColumnDefinitions>
@@ -26,21 +27,24 @@
           </Grid.ColumnDefinitions>
 
           <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Source="ic_category" />
+
           </StackLayout>
           <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-            <Picker Title="Select Category">
-              <Picker.Items>
-                <x:String>1</x:String>
-                <x:String>2</x:String>
-              </Picker.Items>
+            <Entry Placeholder="Enter Name" />
+          </StackLayout>
+          
+          <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image Source="ic_category" />
+          </StackLayout>
+          <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Picker Title="Select Category" x:Name="categoryPicker">
             </Picker>
           </StackLayout>
 
-          <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+          <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
             <Image Source="ic_location" />
           </StackLayout>
-          <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+          <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <Grid>
               <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -58,17 +62,17 @@
             </Grid>
           </StackLayout>
 
-          <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+          <StackLayout Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
             <Image Source="ic_landmark" />
           </StackLayout>
-          <StackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+          <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <Entry Placeholder="Enter Landmark" />
           </StackLayout>
 
-          <StackLayout Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+          <StackLayout Grid.Row="4" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
             <Image Source="ic_tag" />
           </StackLayout>
-          <StackLayout x:Name="tagEntryWrapper" Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+          <StackLayout x:Name="tagEntryWrapper" Grid.Row="4" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
           </StackLayout>
         </Grid>
       </ScrollView>
