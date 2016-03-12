@@ -14,7 +14,7 @@
           <!-- MAIN IMAGE -->
           <Image
 						x:Name="img"
-						Source="temp"
+						Source="food"
 						AnchorY="0"
 						TranslationY="0"
 						Scale="1"

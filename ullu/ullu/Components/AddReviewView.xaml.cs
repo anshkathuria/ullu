@@ -13,6 +13,7 @@ namespace ullu.Components
         public AddReviewView()
         {
             InitializeComponent();
+            starOne.IsStarred = true;
         }
     }
 }

@@ -9,11 +9,11 @@
           <local:ParallaxView/>
         </ContentPage>
         <ContentPage Title="Reviews">
-          <ContentPage.ToolbarItems>
-            <ToolbarItem Icon="ic_add" Clicked="OnAddReviewClicked"/>
-          </ContentPage.ToolbarItems>
-          <local:AddReviewView/>
-          <!--<local:ReviewView/>-->
+          <local:ReviewView/>
         </ContentPage>
+        <ContentPage Title="Add a Review">
+          <local:AddReviewView/>
+        </ContentPage>
+    
     </TabbedPage.Children>
 </TabbedPage>
