@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using ullu.Services;
+using ullu.Utilities;
 using Xamarin.Forms;
 
 namespace ullu
@@ -12,6 +13,8 @@ namespace ullu
 
             //TestGoogle();
             // The root page of your application
+            //var d = GeoDistance.distance(32.9697, -96.80322, 29.46786, -98.53506, 'K');
+            //Debug.WriteLine(d);
             MainPage = new ContentPage
             {
                 Content = new StackLayout
