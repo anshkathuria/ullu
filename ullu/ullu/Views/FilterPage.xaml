@@ -1,10 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ullu.Views.FilterPage">
+             x:Class="ullu.Views.FilterPage"
+             BackgroundColor="#ECF0F1">
   <ContentPage.Content>
-    <StackLayout>
-      <Button Text="Apply" Clicked="ApplyBtn" />
+    <StackLayout Padding="10" Spacing="40">
+      <Label Text="Sort Stores By" FontSize="Small" HorizontalOptions="Center" FontAttributes="Bold"/>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0"  Grid.Column="0" Text="Rating" BackgroundColor="White" BorderWidth="1.5" Image="star_outline" HorizontalOptions="Center" Clicked="OnRatingClicked"/>
+        <Button Grid.Row="0"  Grid.Column="1" Text="Distance" BackgroundColor="White" BorderWidth="1.5" Image="star_outline" HorizontalOptions="Center" Clicked="OnDistanceClicked"/>
+      </Grid>
+      <Label Text="Select Your Categories" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+      <StackLayout Spacing="20">
+        <StackLayout Orientation="Horizontal" Spacing="5">
+          <Button Text="Chai" Clicked="OnBtnClicked" WidthRequest="80" BackgroundColor="White" BorderWidth="1.5"/>
+          <Button Text="Sutta" Clicked="OnBtnClicked" WidthRequest="90" BackgroundColor="White" BorderWidth="1.5"/>
+          <Button Text="South Indian" Clicked="OnBtnClicked" WidthRequest="150" BackgroundColor="White" BorderWidth="1.5"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Button Text="North Indian" WidthRequest="150" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
+          <Button Text="Veg" WidthRequest="80" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
+          <Button Text="NonVeg" WidthRequest="90" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
+        </StackLayout>
+      </StackLayout>
+      <Button Text="Apply" HorizontalOptions="FillAndExpand" VerticalOptions="End" BackgroundColor="Green" TextColor="White"/>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
