@@ -22,9 +22,10 @@ namespace ullu.Droid
 
             ImageCircleRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            TagEntryRenderer.Init();
             LoadApplication(new App());
 
-            TagEntryRenderer.Init();
+            
             //Hide the xamarin logo
             var color = new ColorDrawable(Color.Transparent);
             ActionBar.SetIcon(color);

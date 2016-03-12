@@ -67,6 +67,7 @@
     <Compile Include="FireSharp\Response\PushResponse.cs" />
     <Compile Include="FireSharp\Response\SetResponse.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\TagItem.cs" />
     <Compile Include="Models\Todo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\RatingController\RatingConvertor.cs" />
