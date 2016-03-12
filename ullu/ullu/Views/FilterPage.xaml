@@ -28,7 +28,7 @@
         <StackLayout Orientation="Horizontal">
           <Button Text="North Indian" WidthRequest="150" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
           <Button Text="Veg" WidthRequest="80" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
-          <Button Text="NonVeg" WidthRequest="90" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
+          <Button Text="Non-Veg" WidthRequest="90" Clicked="OnBtnClicked" BackgroundColor="White" BorderWidth="1.5"/>
         </StackLayout>
       </StackLayout>
       <Button Text="Apply" HorizontalOptions="FillAndExpand" VerticalOptions="End" BackgroundColor="Green" TextColor="White"/>

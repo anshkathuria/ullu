@@ -23,7 +23,7 @@
             <Label Text="Store Name" FontSize="Medium" LineBreakMode="TailTruncation" />
             <Label Text="Category" FontSize="Small" LineBreakMode="TailTruncation"/>
             <StackLayout HorizontalOptions="Start" VerticalOptions="EndAndExpand" Orientation="Horizontal" Spacing="1">
-              <Label Text="3.5" FontAttributes="Bold"/>
+              <Label Text="3.5" FontAttributes="Bold" VerticalOptions="Center"/>
               <Image Source="star_selected" />
             </StackLayout>
           </StackLayout>
