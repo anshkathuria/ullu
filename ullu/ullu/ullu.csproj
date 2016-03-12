@@ -37,6 +37,12 @@
   <ItemGroup>
     <Compile Include="ActivityIndicator\IHUDProvider.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="Components\ParallaxView.xaml.cs">
+      <DependentUpon>ParallaxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ReviewView.xaml.cs">
+      <DependentUpon>ReviewView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Components\StoreCard.xaml.cs">
       <DependentUpon>StoreCard.xaml</DependentUpon>
     </Compile>
@@ -87,6 +93,10 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\FilterViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\StoreDetailViewModel.cs" />
+    <Compile Include="Views\AddReviewPage.xaml.cs">
+      <DependentUpon>AddReviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddStorePage.xaml.cs">
       <DependentUpon>AddStorePage.xaml</DependentUpon>
     </Compile>
@@ -95,6 +105,9 @@
     </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StoreDetailPage.xaml.cs">
+      <DependentUpon>StoreDetailPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +209,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Components\StoreStripView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\StoreDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\ParallaxView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\ReviewView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AddReviewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ullu.Components;assembly=ullu"
+             x:Class="ullu.Views.StoreDetailPage">
+  <TabbedPage.Children>
+        <ContentPage Title="Description">
+          <local:ParallaxView/>
+        </ContentPage>
+        <ContentPage Title="Reviews">
+          <ContentPage.ToolbarItems>
+            <ToolbarItem Icon="ic_add" Clicked="OnAddReviewClicked"/>
+          </ContentPage.ToolbarItems>
+          <local:ReviewView/>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
