@@ -1,15 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:ullu.Components"
              x:Class="ullu.Views.HomePage"
-             Title="Home">
+             Title="Home"
+             BackgroundColor="#ECF0F1">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="star_selected" />
+    <ToolbarItem Icon="ic_add"/>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout>
-      <Button Text="Go to AddStorePage" Clicked="ContinueBtn" />
-      <Button Text="Go to FilterPage" Clicked="FilterBtn" />
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+      
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+      
+        <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+          <SearchBar
+              x:Name="searchFor"
+              Placeholder="Search" />
+        </StackLayout>
+        
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" Padding="10">
+          <RelativeLayout>
+            <Button x:Name="filterBgBtn" BorderRadius="20" BorderWidth="2" BorderColor="Gray" BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" />
+            <Image Source="ic_filter"
+                   HeightRequest="32"
+                   WidthRequest="32"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=filterBgBtn, Property=X, Factor=1,Constant=4}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=filterBgBtn, Property=Y, Factor=1,Constant=4}">
+            </Image>
+          </RelativeLayout>
+        </StackLayout>        
+      </Grid>
+      <components:StoreCard />
+      <StackLayout>
+        <Button Text="Go to AddStorePage" Clicked="ContinueBtn" />
+        <Button Text="Go to FilterPage" Clicked="FilterBtn" />
+      </StackLayout>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

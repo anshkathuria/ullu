@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace ullu.Components
 {
-    public partial class CardView : ContentView
+    public partial class StoreCard : ContentView
     {
-        public CardView()
+        public StoreCard()
         {
             InitializeComponent();
         }
