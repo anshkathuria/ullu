@@ -6,7 +6,7 @@
              Title="Home"
              BackgroundColor="#ECF0F1">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="ic_add"/>
+    <ToolbarItem Icon="ic_add" Clicked="OnAddStoreBtnClicked"/>
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout>
@@ -34,14 +34,16 @@
                    WidthRequest="32"
                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=filterBgBtn, Property=X, Factor=1,Constant=4}"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=filterBgBtn, Property=Y, Factor=1,Constant=4}">
+              <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnFilterBtnClicked"/>
+              </Image.GestureRecognizers>
             </Image>
           </RelativeLayout>
         </StackLayout>        
       </Grid>
       <components:StoreCard />
       <StackLayout>
-        <Button Text="Go to AddStorePage" Clicked="ContinueBtn" />
-        <Button Text="Go to FilterPage" Clicked="FilterBtn" />
+        <Button Text="Go to StoreDetailPage" Clicked="StoreDetailBtn" />
       </StackLayout>
     </StackLayout>
   </ContentPage.Content>

@@ -2,7 +2,8 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ullu.Components;assembly=ullu"
-             x:Class="ullu.Views.StoreDetailPage">
+             x:Class="ullu.Views.StoreDetailPage"
+             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
   <TabbedPage.Children>
         <ContentPage Title="Description">
           <local:ParallaxView/>
@@ -11,7 +12,8 @@
           <ContentPage.ToolbarItems>
             <ToolbarItem Icon="ic_add" Clicked="OnAddReviewClicked"/>
           </ContentPage.ToolbarItems>
-          <local:ReviewView/>
+          <local:AddReviewView/>
+          <!--<local:ReviewView/>-->
         </ContentPage>
     </TabbedPage.Children>
 </TabbedPage>
