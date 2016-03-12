@@ -37,6 +37,9 @@
   <ItemGroup>
     <Compile Include="ActivityIndicator\IHUDProvider.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="Components\CardView.xaml.cs">
+      <DependentUpon>CardView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Constants\AppConstants.cs" />
     <Compile Include="FireSharp\Config\FirebaseConfig.cs" />
     <Compile Include="FireSharp\Config\IFirebaseConfig.cs" />
@@ -65,6 +68,9 @@
     <Compile Include="Controls\RatingController\RatingConvertor.cs" />
     <Compile Include="Controls\RatingController\StarBehaviour.cs" />
     <Compile Include="Services\FireSharpClient.cs" />
+    <Compile Include="TestStarsPage.xaml.cs">
+      <DependentUpon>TestStarsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ObservableDictionary.cs" />
     <Compile Include="Toasts\Extensions.cs" />
     <Compile Include="Toasts\IToastNotifier.cs" />
@@ -101,6 +107,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\CardView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Page Include="TestStarsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
