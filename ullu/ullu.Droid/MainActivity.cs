@@ -5,11 +5,13 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.OS;
 
 namespace ullu.Droid
 {
-    [Activity(Label = "ullu", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "ullu", Icon = "@drawable/icon", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -18,6 +20,10 @@ namespace ullu.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+
+            //Hide the xamarin logo
+            var color = new ColorDrawable(Color.Transparent);
+            ActionBar.SetIcon(color);
         }
     }
 }
