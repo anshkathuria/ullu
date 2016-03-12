@@ -103,8 +103,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Toasts\ToastNotifier.cs" />
     <Compile Include="SplashScreen\SplashActivity.cs" />
+    <Compile Include="Toasts\ToatsNotifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
