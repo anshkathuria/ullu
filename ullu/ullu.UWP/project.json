@@ -4,6 +4,7 @@
     "Newtonsoft.Json": "8.0.2",
     "PropertyChanged.Fody": "1.50.4",
     "Xam.Plugin.Connectivity": "2.1.2",
+    "Xam.Plugin.ExternalMaps": "3.0.0",
     "Xam.Plugin.Geolocator": "4.0.0-beta1",
     "Xamarin.Forms": "2.1.0.6526"
   },

@@ -15,19 +15,7 @@ namespace ullu
             // The root page of your application
             //var d = GeoDistance.distance(32.9697, -96.80322, 29.46786, -98.53506, 'K');
             //Debug.WriteLine(d);
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            MainPage = new TestParallaxPage();
         }
         private async void TestGoogle()
         {

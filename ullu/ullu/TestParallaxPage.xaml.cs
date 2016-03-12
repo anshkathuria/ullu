@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.ExternalMaps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,11 @@ namespace ullu
                 img.Scale = newHeight / _imageHeight;
                 img.TranslationY = outerScrollView.ScrollY / 2;
             }
+        }
+
+        async void OnMapsButtonClicked(object sender, EventArgs e)
+        {
+            var success = await CrossExternalMaps.Current.NavigateTo("Space Needle", 47.6204, -122.3491);
         }
     }
 }

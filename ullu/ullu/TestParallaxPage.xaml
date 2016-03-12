@@ -295,7 +295,7 @@
           </StackLayout>
         </StackLayout>-->
 
-
+        <Button Text="GoToMaps" Clicked="OnMapsButtonClicked"/>
       </StackLayout>
     </Grid>
 
