@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ullu.TestStarsPage"
+             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <controls:RatingConverter x:Key="ratingConverter" />
+      <Style TargetType="Label">
+        <Setter Property="TextColor" Value="#4CAF50" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout x:Name="TestStars" />
+
+  <StackLayout Orientation="Horizontal" HeightRequest="70">
+    <Grid>
+      <Grid.Behaviors>
+        <controls:StarBehavior x:Name="starOne" GroupName="myStar"/>
+      </Grid.Behaviors>
+      <Image x:Name="starBlankOne"
+              Source="star_outline" />
+
+      <Image x:Name="starSelectedOne"
+              Source="star_selected"
+              IsVisible="{Binding Source={x:Reference starOne},
+                                    Path=IsStarred}"/>
+    </Grid>
+    <Grid >
+      <Grid.Behaviors>
+        <controls:StarBehavior x:Name="starTwo" GroupName="myStar"/>
+      </Grid.Behaviors>
+      <Image x:Name="starBlankTwo"
+              Source="star_outline" />
+
+      <Image x:Name="starSelectedTwo"
+              Source="star_selected"
+              IsVisible="{Binding Source={x:Reference starTwo},
+                                    Path=IsStarred}"/>
+    </Grid>
+    <Grid >
+      <Grid.Behaviors>
+        <controls:StarBehavior x:Name="starThree" GroupName="myStar"/>
+      </Grid.Behaviors>
+      <Image x:Name="starBlankThree"
+              Source="star_outline" />
+
+      <Image x:Name="starSelectedThree"
+              Source="star_selected"
+              IsVisible="{Binding Source={x:Reference starThree},
+                                    Path=IsStarred}"/>
+    </Grid>
+    <Grid >
+      <Grid.Behaviors>
+        <controls:StarBehavior x:Name="starFour" GroupName="myStar"/>
+      </Grid.Behaviors>
+      <Image x:Name="starBlankFour"
+              Source="star_outline" />
+
+      <Image x:Name="starSelectedFour"
+              Source="star_selected"
+              IsVisible="{Binding Source={x:Reference starFour},
+                                    Path=IsStarred}"/>
+    </Grid>
+    <Grid >
+      <Grid.Behaviors>
+        <controls:StarBehavior x:Name="starFive" GroupName="myStar"/>
+      </Grid.Behaviors>
+      <Image x:Name="starBlankFive"
+              Source="star_outline" />
+
+      <Image x:Name="starSelectedFive"
+              Source="star_selected"
+              IsVisible="{Binding Source={x:Reference starFive},
+                                    Path=IsStarred}"/>
+    </Grid>
+    <Label Text="{Binding Source={x:Reference starFive},
+                                    Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
+  </StackLayout>
+</ContentPage>

@@ -11,7 +11,7 @@ using System;
 using ullu.ActivityIndicator;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(ullu.Droid.ActivityIndicator.HUDProvider))]
+[assembly: Dependency(typeof(ullu.Droid.Activityindicator.HUDProvider))]
 
 namespace ullu.Droid.Activityindicator
 {
