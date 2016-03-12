@@ -10,5 +10,6 @@ namespace ullu.Constants
     {
         public static string FIREBASE_AUTH = "KfEnUlInrxw2NJArHuqrRnIVCawEODipykevSOnZ";
         public static string FIREBASE_URL = "https://xamfire.firebaseio.com/";
+        public static string GOOGLE_MAPS_API_KEY = "AIzaSyBA-45PWmlgWlCHW_HL4mRJcOCZNCWDB8E";
     }
 }
