@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ullu.TestStarsPage"
-             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
+             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu"
+             xmlns:local="clr-namespace:ullu.Components">
   <ContentPage.Resources>
     <ResourceDictionary>
       <controls:RatingConverter x:Key="ratingConverter" />
@@ -11,8 +12,8 @@
       </Style>
     </ResourceDictionary>
   </ContentPage.Resources>
-  <StackLayout x:Name="TestStars" />
-
+  <StackLayout>
+  <local:CardView />
   <StackLayout Orientation="Horizontal" HeightRequest="70">
     <Grid>
       <Grid.Behaviors>
@@ -74,7 +75,8 @@
               IsVisible="{Binding Source={x:Reference starFive},
                                     Path=IsStarred}"/>
     </Grid>
-    <Label Text="{Binding Source={x:Reference starFive},
+  </StackLayout>
+  <Label Text="{Binding Source={x:Reference starFive},
                                     Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
   </StackLayout>
 </ContentPage>
