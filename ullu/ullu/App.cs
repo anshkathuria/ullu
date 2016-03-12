@@ -1,11 +1,16 @@
-﻿using Xamarin.Forms;
+﻿using System.Diagnostics;
+using ullu.Services;
+using Xamarin.Forms;
 
 namespace ullu
 {
     public class App : Application
     {
+        GoogleMapsService googleMapsService = GoogleMapsService.Instance;
         public App()
         {
+
+            //TestGoogle();
             // The root page of your application
             MainPage = new ContentPage
             {
@@ -21,7 +26,11 @@ namespace ullu
                 }
             };
         }
-
+        private async void TestGoogle()
+        {
+            var l = await googleMapsService.GetLocationFromAddress("1600 Amphitheatre Parkway, Mountain View, CA").ConfigureAwait(false);
+            Debug.WriteLine(l.lat);
+        }
         protected override void OnStart()
         {
             // Handle when your app starts
