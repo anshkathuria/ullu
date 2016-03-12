@@ -40,6 +40,9 @@
     <Compile Include="Components\CardView.xaml.cs">
       <DependentUpon>CardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Components\StoreStripView.xaml.cs">
+      <DependentUpon>StoreStripView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Constants\AppConstants.cs" />
     <Compile Include="Dto\GoogleMaps.cs" />
     <Compile Include="FireSharp\Config\FirebaseConfig.cs" />
@@ -187,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FilterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\StoreStripView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
