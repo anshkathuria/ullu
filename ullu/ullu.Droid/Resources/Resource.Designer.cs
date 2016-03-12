@@ -1967,6 +1967,9 @@ namespace ullu.Droid
 			// aapt resource value: 0x7f0b001d
 			public const int collapseActionView = 2131427357;
 			
+			// aapt resource value: 0x7f0b0081
+			public const int companyName = 2131427457;
+			
 			// aapt resource value: 0x7f0b0046
 			public const int contentPanel = 2131427398;
 			
@@ -2444,7 +2447,10 @@ namespace ullu.Droid
 			public const int select_dialog_singlechoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int support_simple_spinner_dropdown_item = 2130903087;
+			public const int SplashLayout = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int support_simple_spinner_dropdown_item = 2130903088;
 			
 			static Layout()
 			{
@@ -3290,6 +3296,9 @@ namespace ullu.Droid
 			
 			// aapt resource value: 0x7f070001
 			public const int Theme_MediaRouter_Light = 2131165185;
+			
+			// aapt resource value: 0x7f070145
+			public const int Theme_Splash = 2131165509;
 			
 			// aapt resource value: 0x7f0700ee
 			public const int ThemeOverlay_AppCompat = 2131165422;
