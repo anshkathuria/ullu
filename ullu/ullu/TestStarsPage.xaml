@@ -4,7 +4,7 @@
              x:Class="ullu.TestStarsPage"
              xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu"
              xmlns:local="clr-namespace:ullu.Components">
-  <ContentPage.Resources>
+  <!--<ContentPage.Resources>
     <ResourceDictionary>
       <controls:RatingConverter x:Key="ratingConverter" />
       <Style TargetType="Label">
@@ -78,5 +78,12 @@
   </StackLayout>
   <Label Text="{Binding Source={x:Reference starFive},
                                     Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
+  </StackLayout>-->
+  <StackLayout Padding="20">
+    <Button Text="Button1" Clicked="OnBtnClicked" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="1"/>
+    <Button Text="Button2" Clicked="OnBtnClicked" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="1"/>
+    <Button Text="Button3" Clicked="OnBtnClicked" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="1"/>
+    <Button Text="Button4" Clicked="OnBtnClicked" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="1"/>
+    
   </StackLayout>
 </ContentPage>
