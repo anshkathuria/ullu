@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
   <TabbedPage.Children>
         <ContentPage Title="Description">
-          <local:ParallaxView/>
+          <local:ParallaxView BindingContext="{Binding Value}"/>
         </ContentPage>
         <ContentPage Title="Reviews">
           <ContentPage.ToolbarItems>

@@ -14,7 +14,7 @@
           <!-- MAIN IMAGE -->
           <Image
 						x:Name="img"
-						Source="temp"
+						Source="food"
 						AnchorY="0"
 						TranslationY="0"
 						Scale="1"
@@ -46,7 +46,7 @@
 
             <!-- HEADERS -->
             <Label
-							Text="Binding Title"
+							Text="{Binding Name}"
 							LineBreakMode="WordWrap"
 							VerticalOptions="FillAndExpand"
 							TextColor="White"
@@ -66,7 +66,7 @@
 								HorizontalOptions="Start"/>-->
 
               <Label
-								Text="author"
+								Text="{Binding Category}"
 								VerticalOptions="Center"
 								TextColor="Black"
 								HorizontalOptions="End" />
