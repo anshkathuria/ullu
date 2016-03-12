@@ -9,6 +9,7 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.OS;
 using ullu.Droid.Controls;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace ullu.Droid
 {
@@ -19,6 +20,7 @@ namespace ullu.Droid
         {
             base.OnCreate(bundle);
 
+            ImageCircleRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 

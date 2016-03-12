@@ -1,10 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ullu.Views.AddStorePage">
+             x:Class="ullu.Views.AddStorePage"
+             xmlns:local="clr-namespace:ullu.Components;assembly=ullu"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
   <ContentPage.Content>
-    <StackLayout>
+    <!--<StackLayout>
       <Button Text="Save" Clicked="SaveBtn" />
-    </StackLayout>
+    </StackLayout>-->
+    <ScrollView>
+      <Grid VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+          <local:StoreStripView x:Name="storeStack"/>
+
+          <StackLayout Spacing="0" Padding="0,40">
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="48,0" HeightRequest="56">
+              <Label Text="Landmark:" TextColor="Black" VerticalOptions="Center" FontSize="Large" />
+              <ContentView Padding="0,5,0,0" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Enter Store Name" />
+              </ContentView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="48,0" HeightRequest="56">
+              <Label Text="Landmark:" TextColor="Black" VerticalOptions="Center" FontSize="Large" />
+              <ContentView Padding="0,5,0,0" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Enter Area" />
+              </ContentView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="48,0" HeightRequest="56">
+              <Label Text="Landmark:" TextColor="Black" VerticalOptions="Center" FontSize="Large" />
+              <ContentView Padding="0,5,0,0" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Enter LandMark" />
+              </ContentView>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="20" Padding="48,0" HeightRequest="56">
+              <Label Text="Landmark:" TextColor="Black" VerticalOptions="Center" FontSize="Large" />
+              <ContentView Padding="0,5,0,0" HorizontalOptions="FillAndExpand">
+                <Entry Placeholder="Enter Category" />
+              </ContentView>
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+
+        <StackLayout Padding="10,0,10,0" Grid.Row="1">
+          <Button Text="SAVE" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+      </Grid>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

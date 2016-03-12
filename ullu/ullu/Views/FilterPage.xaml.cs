@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using ullu.ViewModels;
 using Xamarin.Forms;
 
 namespace ullu.Views
@@ -13,6 +9,7 @@ namespace ullu.Views
         public FilterPage()
         {
             InitializeComponent();
+            BindingContext = new FilterViewModel();
         }
         private async void ApplyBtn(object sender, EventArgs e)
         {

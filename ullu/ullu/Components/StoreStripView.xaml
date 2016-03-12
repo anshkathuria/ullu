@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ullu.Components.StoreStripView"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             BackgroundColor="Transparent">
+  <Grid x:Name="root">
+    <BoxView BackgroundColor="#03A9F4" HeightRequest="100" VerticalOptions="Start"/>
+
+    <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" Padding="0,22,0,20">
+      <ContentView Padding="0,10,0,0">
+        <controls:CircleImage Source="temp" HorizontalOptions="End" VerticalOptions="Center" Aspect="AspectFill" WidthRequest="96" HeightRequest="96" />
+      </ContentView>
+    </StackLayout>
+  </Grid>
+</ContentView>
