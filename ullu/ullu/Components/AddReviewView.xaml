@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ullu.Components.AddReviewView"
+             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
+  <ContentView.Resources>
+    <ResourceDictionary>
+      <controls:RatingConverter x:Key="ratingConverter" />
+      <Style TargetType="Label">
+        <Setter Property="TextColor" Value="#4CAF50" />
+      </Style>
+    </ResourceDictionary>
+  </ContentView.Resources>
+  <StackLayout>
+    <Label  HorizontalOptions="Center" FontSize="Large" Text="{Binding Source={x:Reference starFive},Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
+    <StackLayout  HorizontalOptions="Center" Orientation="Horizontal" HeightRequest="70">
+      <Grid>
+        <Grid.Behaviors>
+          <controls:StarBehavior x:Name="starOne" GroupName="myStar"/>
+        </Grid.Behaviors>
+        <Image x:Name="starBlankOne"
+                Source="star_outline" />
+
+        <Image x:Name="starSelectedOne"
+                Source="star_selected"
+                IsVisible="{Binding Source={x:Reference starOne},
+                                    Path=IsStarred}"/>
+      </Grid>
+      <Grid >
+        <Grid.Behaviors>
+          <controls:StarBehavior x:Name="starTwo" GroupName="myStar"/>
+        </Grid.Behaviors>
+        <Image x:Name="starBlankTwo"
+                Source="star_outline" />
+
+        <Image x:Name="starSelectedTwo"
+                Source="star_selected"
+                IsVisible="{Binding Source={x:Reference starTwo},
+                                    Path=IsStarred}"/>
+      </Grid>
+      <Grid >
+        <Grid.Behaviors>
+          <controls:StarBehavior x:Name="starThree" GroupName="myStar"/>
+        </Grid.Behaviors>
+        <Image x:Name="starBlankThree"
+                Source="star_outline" />
+
+        <Image x:Name="starSelectedThree"
+                Source="star_selected"
+                IsVisible="{Binding Source={x:Reference starThree},
+                                    Path=IsStarred}"/>
+      </Grid>
+      <Grid >
+        <Grid.Behaviors>
+          <controls:StarBehavior x:Name="starFour" GroupName="myStar"/>
+        </Grid.Behaviors>
+        <Image x:Name="starBlankFour"
+                Source="star_outline" />
+
+        <Image x:Name="starSelectedFour"
+                Source="star_selected"
+                IsVisible="{Binding Source={x:Reference starFour},
+                                    Path=IsStarred}"/>
+      </Grid>
+      <Grid >
+        <Grid.Behaviors>
+          <controls:StarBehavior x:Name="starFive" GroupName="myStar"/>
+        </Grid.Behaviors>
+        <Image x:Name="starBlankFive"
+                Source="star_outline" />
+
+        <Image x:Name="starSelectedFive"
+                Source="star_selected"
+                IsVisible="{Binding Source={x:Reference starFive},
+                                    Path=IsStarred}"/>
+      </Grid>
+    </StackLayout>
+    <Grid VerticalOptions="Fill" ColumnSpacing="10" Padding="20,0,20,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+        <Image Source="ic_category" />
+      </StackLayout>
+      <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="Enter Title" />
+      </StackLayout>
+      <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+        <Image Source="ic_landmark" />
+      </StackLayout>
+      <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="Enter Description" />
+      </StackLayout>
+    </Grid>
+    <Button Text="Submit" />
+  </StackLayout>
+</ContentView>
