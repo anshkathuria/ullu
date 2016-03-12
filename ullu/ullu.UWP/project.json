@@ -1,5 +1,6 @@
 ﻿{
   "dependencies": {
+    "DLToolkit.Forms.Controls.TagEntryView": "1.0.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
     "Newtonsoft.Json": "8.0.2",
     "PropertyChanged.Fody": "1.50.4",

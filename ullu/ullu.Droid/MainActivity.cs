@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.OS;
+using ullu.Droid.Controls;
 
 namespace ullu.Droid
 {
@@ -21,6 +22,7 @@ namespace ullu.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
+            TagEntryRenderer.Init();
             //Hide the xamarin logo
             var color = new ColorDrawable(Color.Transparent);
             ActionBar.SetIcon(color);
