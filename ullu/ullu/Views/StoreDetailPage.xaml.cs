@@ -34,7 +34,7 @@ namespace ullu.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            (BindingContext as StoreDetailViewModel).RefreshData.Execute(this);
+            ViewModel.RefreshData.Execute(this);
         }
     }
 }

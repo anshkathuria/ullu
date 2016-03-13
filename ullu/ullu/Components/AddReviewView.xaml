@@ -96,7 +96,7 @@
       </Grid.ColumnDefinitions>
 
       <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-        <Entry Placeholder="Enter Description" />
+        <Entry Placeholder="Enter Feedback" x:Name="feedbackEntry"/>
       </StackLayout>
       <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
         <Image Source="ic_send" WidthRequest="35" HeightRequest="35" >

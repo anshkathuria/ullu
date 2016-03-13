@@ -20,15 +20,25 @@ namespace ullu.Components
         {
             FireSharpClient FsClient = FireSharpClient.Instance;
 
-            var s = BindingContext;
+            var s = BindingContext as string;
+            int rating;
+            if (starFive.IsStarred)
+                rating = 5;
+            else if (starFour.IsStarred)
+                rating = 4;
+            else if (starThree.IsStarred)
+                rating = 3;
+            else if (starTwo.IsStarred)
+                rating = 2;
+            else
+                rating = 1;
             var r = new Review
             {
-                Rating = 4,
-                Description = "Test Description",
+                Rating = rating,
+                Description = feedbackEntry.Text,
                 Date = DateTime.Now.ToString("MMM dd")
             };
-
-            var pushKey = await FsClient.Push("stores/" + s + "/reviews", r);
+            var pushKey = await FsClient.Push("stores/" + s + "/Reviews", r);
 
         }
     }

@@ -27,7 +27,7 @@ namespace ullu.ViewModels
                 FireSharpClient FsClient = FireSharpClient.Instance;
                 var hud = DependencyService.Get<IHUDProvider>();
                 hud.DisplayProgress("Getting Reviews");
-                var reviewsDict = await FsClient.GetAll<Review>("stores/"+ KeyValue.Key + "/reviews");
+                var reviewsDict = await FsClient.GetAll<Review>("stores/"+ KeyValue.Key + "/Reviews");
                 if (reviewsDict == null || reviewsDict.Count == 0)
                 {
                     var msg = "No Reviews :(";

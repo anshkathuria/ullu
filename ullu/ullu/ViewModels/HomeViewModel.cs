@@ -52,7 +52,7 @@ namespace ullu.ViewModels
         {
             filteredStoresList = new ObservableDictionary<string, Store>(
                                 storesList.Where(x => (x.Value.Name.ToLower().Contains(query.ToLower())) ||
-                                                      (x.Value.Tags.Contains(query)) ||
+                                                      (x.Value.Tags.Contains("#" + query)) ||
                                                       (x.Value.Category.ToLower().Contains(query.ToLower())) ||
                                                       (x.Value.Landmark.ToLower().Contains(query.ToLower()))
                                                  ).ToDictionary(x => x.Key, x => x.Value));
