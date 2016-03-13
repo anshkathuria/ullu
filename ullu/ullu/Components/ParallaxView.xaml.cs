@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ullu.Models;
+using ullu.Services;
 using ullu.Toasts;
 using Xamarin.Forms;
 
@@ -42,19 +43,15 @@ namespace ullu.Components
             }
         }
 
-        async void OnMapsButtonClicked(object sender, EventArgs e)
-        {
-            var success = await CrossExternalMaps.Current.NavigateTo("Space Needle", 47.6204, -122.3491);
-        }
-
         TapGestureRecognizer tgr = new TapGestureRecognizer();
         private async void navigateIconTapped(object sender, EventArgs e)
         {
             tgr.Tapped -= navigateIconTapped;
-            Store s = this.BindingContext as Store;
-            if (s.Latitude != 0 && s.Longitude != 0)
+            var s = (KeyValuePair<string, Store>)BindingContext;
+            Store str = s.Value;
+            if (str.Latitude != 0 && str.Longitude != 0)
             {
-                var success = await CrossExternalMaps.Current.NavigateTo(s.Name, s.Latitude, s.Longitude);
+                var success = await CrossExternalMaps.Current.NavigateTo(str.Name, str.Latitude, str.Longitude);
             }
             else
             {

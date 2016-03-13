@@ -31,5 +31,10 @@ namespace ullu.Views
         {
             Navigation.PushAsync(new AddReviewPage());
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            (BindingContext as StoreDetailViewModel).RefreshData.Execute(this);
+        }
     }
 }

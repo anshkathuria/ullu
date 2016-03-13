@@ -46,7 +46,7 @@
 
             <!-- HEADERS -->
             <Label
-							Text="{Binding Name}"
+							Text="{Binding Value.Name}"
 							LineBreakMode="WordWrap"
 							VerticalOptions="FillAndExpand"
 							TextColor="White"
@@ -59,7 +59,7 @@
 							VerticalOptions="End" >
 
               <Label
-								Text="{Binding Category}"
+								Text="{Binding Value.Category}"
 								VerticalOptions="Center"
 								TextColor="White"
 								HorizontalOptions="End" />
@@ -72,11 +72,11 @@
 						Padding="20"
 						BackgroundColor="White"
             HeightRequest="70">
-            <Label Text="{Binding Landmark}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" FontSize="Large" />
+            <Label Text="{Binding Value.Landmark}" VerticalOptions="Start" HorizontalOptions="FillAndExpand" FontSize="Large" />
             <Image Source="ic_navigation" x:Name="navigateIcon" VerticalOptions="Start" HeightRequest="60" WidthRequest="60" HorizontalOptions="End"/>
           </StackLayout>
           <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <local:AddReviewView/>
+            <local:AddReviewView BindingContext="{Binding Key}"/>
           </StackLayout>
         </StackLayout>
       </StackLayout>

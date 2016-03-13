@@ -63,7 +63,7 @@ namespace ullu.Views
             var hud = DependencyService.Get<IHUDProvider>();
             hud.DisplayProgress("Saving Data");
             await Task.Delay(500);
-            if (!String.IsNullOrWhiteSpace(nameEntry.Text) && categoryPicker.SelectedIndex >=0 && !String.IsNullOrWhiteSpace(addressEntry.Text) && !String.IsNullOrWhiteSpace(landmarkEntry.Text) && ViewModel.Items.Count > 0)
+            if (!string.IsNullOrWhiteSpace(nameEntry.Text) && categoryPicker.SelectedIndex >=0 && !string.IsNullOrWhiteSpace(addressEntry.Text) && !string.IsNullOrWhiteSpace(landmarkEntry.Text) && ViewModel.Items.Count > 0)
             {
                 if (CrossConnectivity.Current.IsConnected)
                 {

@@ -76,6 +76,7 @@
     <Compile Include="FireSharp\Response\PushResponse.cs" />
     <Compile Include="FireSharp\Response\SetResponse.cs" />
     <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\TagItem.cs" />
     <Compile Include="Models\Todo.cs" />

@@ -99,7 +99,11 @@
         <Entry Placeholder="Enter Description" />
       </StackLayout>
       <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-        <Image Source="ic_send" WidthRequest="35" HeightRequest="35" />
+        <Image Source="ic_send" WidthRequest="35" HeightRequest="35" >
+          <Image.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnAddReviewBtnClicked" />
+          </Image.GestureRecognizers>
+        </Image>
       </StackLayout>
     </Grid>
   </StackLayout>

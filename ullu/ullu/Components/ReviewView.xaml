@@ -25,12 +25,12 @@
       <StackLayout HorizontalOptions="FillAndExpand" Spacing="0" Padding="10">
         <StackLayout Orientation="Horizontal">
           <Label
-            Text="Author"
+            Text="{Binding Rating}"
             HorizontalOptions="Fill"
             VerticalOptions="EndAndExpand"
             TextColor="#FF212121"/>
           <Label
-            Text="13/03/16"
+            Text="{Binding Date}"
             FontSize ="12"
             XAlign="End"
             HorizontalOptions="End"
@@ -47,7 +47,7 @@
         <StackLayout Orientation="Horizontal" Padding="0,8,0,0">
 
           <Label
-            Text="Body of the review"
+            Text="{Binding Description}"
             LineBreakMode="WordWrap"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand" />

@@ -7,10 +7,20 @@
              Title="{Binding KeyValue.Value.Name}">
   <TabbedPage.Children>
         <ContentPage Title="Description">
-          <local:ParallaxView BindingContext="{Binding KeyValue.Value}"/>
+          <local:ParallaxView BindingContext="{Binding KeyValue}"/>
         </ContentPage>
         <ContentPage Title="Reviews">
-          <local:ReviewView/>
+          <ListView x:Name="reviewsListView" HasUnevenRows="True" ItemsSource="{Binding reviewsList}">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
+                  <ViewCell.View>
+                    <local:ReviewView BindingContext="{Binding Value}" />
+                  </ViewCell.View>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
         </ContentPage>    
     </TabbedPage.Children>
 </TabbedPage>
