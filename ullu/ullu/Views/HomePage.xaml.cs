@@ -1,15 +1,44 @@
-﻿using System;
+﻿using Plugin.Connectivity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using ullu.ActivityIndicator;
+using ullu.Models;
+using ullu.Services;
+using ullu.Toasts;
 using ullu.ViewModels;
+using Utilities;
 using Xamarin.Forms;
 
 namespace ullu.Views
 {
     public partial class HomePage : ContentPage
     {
+        HomeViewModel ViewModel;
         public HomePage()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel();
+            ViewModel = new HomeViewModel();
+            BindingContext = ViewModel;
+            searchFor.TextChanged += (sender, e) => FilterResults(searchFor.Text);
+            searchFor.SearchButtonPressed += (sender, e) =>
+            {
+                FilterResults(searchFor.Text);
+            };
+        }
+
+        private void FilterResults(string text)
+        {
+            storesListView.BeginRefresh();
+            ViewModel.FilterResults(text);
+            storesListView.EndRefresh();
+        }
+
+        
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ViewModel.RefreshData.Execute(this);
         }
 
         private async void OnAddStoreBtnClicked(object sender, EventArgs e)
@@ -24,12 +53,14 @@ namespace ullu.Views
         {
             await Navigation.PushAsync(new FilterPage());
         }
-        private async void StoreDetailBtn(object sender, EventArgs e)
+        public async void OpenStore(object sender, SelectedItemChangedEventArgs e)
         {
-            Button btn = sender as Button;
-            btn.IsEnabled = false;
-            await Navigation.PushAsync(new StoreDetailPage());
-            btn.IsEnabled = true;
+            var x = storesListView.SelectedItem;
+            if(x!=null)
+            {
+                storesListView.SelectedItem = null;
+                await Navigation.PushAsync(new StoreDetailPage(x));
+            }
         }
     }
 }

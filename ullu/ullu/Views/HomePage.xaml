@@ -41,10 +41,21 @@
           </RelativeLayout>
         </StackLayout>        
       </Grid>
-      <components:StoreCard />
+      <!--<components:StoreCard />
       <StackLayout>
         <Button Text="Go to StoreDetailPage" Clicked="StoreDetailBtn" />
-      </StackLayout>
+      </StackLayout>-->
+      <ListView x:Name="storesListView" HasUnevenRows="True" ItemSelected="OpenStore" ItemsSource="{Binding filteredStoresList}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <components:StoreCard BindingContext="{Binding Value}" />
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
