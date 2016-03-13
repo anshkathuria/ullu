@@ -3,17 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ullu.Components;assembly=ullu"
              x:Class="ullu.Views.StoreDetailPage"
-             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu">
+             xmlns:controls="clr-namespace:Controls.RatingController;assembly=ullu"
+             Title="{Binding KeyValue.Value.Name}">
   <TabbedPage.Children>
         <ContentPage Title="Description">
-          <local:ParallaxView BindingContext="{Binding Value}"/>
+          <local:ParallaxView BindingContext="{Binding KeyValue.Value}"/>
         </ContentPage>
         <ContentPage Title="Reviews">
           <local:ReviewView/>
-        </ContentPage>
-        <ContentPage Title="Add a Review">
-          <local:AddReviewView/>
-        </ContentPage>
-    
+        </ContentPage>    
     </TabbedPage.Children>
 </TabbedPage>

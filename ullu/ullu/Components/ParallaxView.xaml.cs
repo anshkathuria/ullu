@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ullu.Models;
+using ullu.Toasts;
 using Xamarin.Forms;
 
 namespace ullu.Components
@@ -16,6 +17,8 @@ namespace ullu.Components
             InitializeComponent();
             outerScrollView.Scrolled += (sender, e) => Parallax();
             Parallax();
+            tgr.Tapped += navigateIconTapped;
+            navigateIcon.GestureRecognizers.Add(tgr);
         }
         double _imageHeight;
         void Parallax()
@@ -42,6 +45,23 @@ namespace ullu.Components
         async void OnMapsButtonClicked(object sender, EventArgs e)
         {
             var success = await CrossExternalMaps.Current.NavigateTo("Space Needle", 47.6204, -122.3491);
+        }
+
+        TapGestureRecognizer tgr = new TapGestureRecognizer();
+        private async void navigateIconTapped(object sender, EventArgs e)
+        {
+            tgr.Tapped -= navigateIconTapped;
+            Store s = this.BindingContext as Store;
+            if (s.Latitude != 0 && s.Longitude != 0)
+            {
+                var success = await CrossExternalMaps.Current.NavigateTo(s.Name, s.Latitude, s.Longitude);
+            }
+            else
+            {
+                var msg = "Location Not Available";
+                msg.ToToast(ToastNotificationType.Error);
+            }
+            tgr.Tapped += navigateIconTapped;
         }
     }
 }

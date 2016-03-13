@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using ullu.Models;
+using ullu.ViewModels;
 using Xamarin.Forms;
 
 namespace ullu.Views
 {
     public partial class StoreDetailPage : TabbedPage
     {
-        private KeyValuePair<string, Store> keyValue;
-
+        
+        StoreDetailViewModel ViewModel;
         public StoreDetailPage()
         {
             InitializeComponent();
@@ -20,8 +21,9 @@ namespace ullu.Views
             InitializeComponent();
             if(x != null)
             {
-                keyValue = (KeyValuePair<string, Store>) x;
-                this.BindingContext = keyValue;
+                ViewModel = new StoreDetailViewModel();
+                ViewModel.KeyValue = (KeyValuePair<string, Store>)x;
+                this.BindingContext = ViewModel;
             }
         }
 

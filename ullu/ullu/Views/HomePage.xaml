@@ -45,7 +45,7 @@
       <StackLayout>
         <Button Text="Go to StoreDetailPage" Clicked="StoreDetailBtn" />
       </StackLayout>-->
-      <ListView x:Name="storesListView" HasUnevenRows="True" ItemSelected="OpenStore">
+      <ListView x:Name="storesListView" HasUnevenRows="True" ItemSelected="OpenStore" ItemsSource="{Binding filteredStoresList}">
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
