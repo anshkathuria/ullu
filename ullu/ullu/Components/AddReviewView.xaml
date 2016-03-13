@@ -11,7 +11,7 @@
       </Style>
     </ResourceDictionary>
   </ContentView.Resources>
-  <StackLayout>
+  <StackLayout Padding="20">
     <Label  HorizontalOptions="Center" FontSize="Large" Text="{Binding Source={x:Reference starFive},Path=Rating, Converter={StaticResource ratingConverter}}" ></Label>
     <StackLayout  HorizontalOptions="Center" Orientation="Horizontal" HeightRequest="70">
       <Grid>
