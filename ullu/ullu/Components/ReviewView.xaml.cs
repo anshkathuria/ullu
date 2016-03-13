@@ -7,7 +7,6 @@ namespace ullu.Components
     public partial class ReviewView : ContentView
     {
         Review r;
-        Image i;
         public ReviewView()
         {
             InitializeComponent();
